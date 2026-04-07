@@ -81,3 +81,153 @@ a:hover {
     padding: 20px;
     margin-top: 30px;
 }
+
+.avatar-wrapper {
+    position: relative;
+    width: fit-content;
+}
+
+.avatar-wrapper::after {
+    content: '☺';
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+    background-color:aliceblue;
+    color:rgb(47, 134, 9);
+    font-size: 16px;
+    border-radius: 50%;
+}
+
+section.contacts-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / 4;
+}
+
+#contact-form {
+    width: 100%;
+}
+
+fieldset.contact-form_fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.field {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.field input, .field textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.field input:invalid, .field textarea:invalid {
+    border: 2px solid rgb(231, 94, 94);
+}
+
+.field input:invalid[pattern] {
+    border: 2px solid rgb(158, 2, 2);
+}
+
+.field input:valid, .field textarea:valid {
+    border: 2px solid rgb(100, 222, 108);
+}
+
+.contact-form_sending-result {
+    margin-top: 16px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out, visibility 0s 0.4s;
+    visibility: hidden;
+}
+
+.successText {
+    color: greenyellow;
+}
+
+.errorText {
+    color: rgb(163, 34, 34)
+}
+
+.show {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+#projects-list div {
+background: white;
+border-radius: 10px;
+box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+padding: 15px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.add-btn {
+    background: #245739;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: all 0.3s;
+}
+
+.image-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    position: relative;
+}
+
+.image-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.image-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-bottom: 15px;
+    color: #173e07;
+    font-size: 20px;
+}
+
+.card-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Основной контент */
+.main-info {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+

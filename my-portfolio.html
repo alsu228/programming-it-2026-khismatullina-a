@@ -10,15 +10,25 @@
 </head>
 <body>
     <header class="header">
-        <h1 class="header-title">Мое портфолио</h1>
+        <h1 class="header-title">Алсу Хисматуллина</h1>
         <p class="header-description">Это страница с моим портфолио</p>
     </header>
+    
+    <main class="main-info">
+    <section class="section">
+    <div class="likes-counter">
+    <strong>❤️ Общих лайков: <span id="total-likes">0</span></strong>
+    </div>
+        <button id="add-image-btn" class="add-btn">➕ Добавить карточку</button>
+        <div id="gallery" class="gallery">
+    </div>
+    </section>
 
-    <main class="container">
+        </section>
         <section class="section">
-            <img class="profile-img" 
-                 src="https://avatars.githubusercontent.com/u/247259315?v=4&size=64" 
-                 alt="Фото Хисматуллина Алсу">
+            <div class="avatar-wrapper">
+                <img class="profile-img" src="https://avatars.githubusercontent.com/u/247259315?v=4&size=64" alt="Фото Хисматуллина Алсу">
+        </div>
             <h2 class="section-header">О себе</h2>
             <p>Меня зовут Алсу, я <b>начинающий программист</b>, мои контакты можете посмотреть <a href="#my-contacts">тут</a>.</p>
             <p>В <u>свободное</u> время хожу в <i>зал</i></p>
@@ -34,11 +44,6 @@
                 <li>Работа в команде</li>
                 <li><strong>MySQL</strong> — базовые знания</li>
             </ol>
-
-            <dl>
-                <dt>HTML</dt>
-                <dd>создание общей структуры страницы</dd>
-            </dl>
         </section>
         <section class="section">
             <h3 class="section-header">Мои хобби:</h3>
@@ -61,7 +66,28 @@
                     <p>Это тоже проект человека из гитхаба</p>
                 </li>
             </ol>
-        </section>
+        <section class="section" id="projects">
+            <h2 class="section-header">Мои проекты</h2>
+                <form id="add-project-form">
+                        <div class="field">
+                            <label for="title">Название проекта</label>
+                            <input type="text" id="title" required>
+                        </div>
+                        <div class="field">
+                            <label for="skills">Технологии</label>
+                            <input type="text" id="skills" placeholder="HTML, CSS, JS" required>
+                        </div>
+                        <div class="field">
+                            <label for="description">Описание</label>
+                            <textarea id="description" required></textarea>
+                        </div>
+                        <div class="field">
+                            <label for="price">Цена</label>
+                            <input type="text" id="price" required>
+                        </div>
+                        <button type="submit">Добавить проект</button>
+                </form>
+            <div id="projects-list"></div>
         <section class="section">
             <table class="achievements-table">
                 <caption><h4 class="section-header">Мои достижения</h4></caption>
@@ -75,7 +101,7 @@
                     <tr>
                         <td>Закончила школу с красным аттестатом</td>
                         <td>2024</td>
-                    </tr>
+                        </tr>
                     <tr>
                         <td>Ходила на дзюдо</td>
                         <td>2015</td>
@@ -86,6 +112,31 @@
                     </tr>
                 </tbody>
             </table>
+        </section>
+        <section class="contacts-form">
+            <h2 class="section-header">Связаться со мной</h2>
+            <form id="contact-form" class="contact-form">
+                <fieldset class="contact-form_fieldset">
+                    <div class="field">
+                        <label for="name">Как к вам обращаться?</label>                        
+                        <input type="text" id="name" name="name" placeholder="Ваше имя" autocomplete="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="Email">Email:</label>                        
+                        <input type="text" id="email" name="email" placeholder="example@mail.com"
+                            pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                    </div>
+                    <div class="field">
+                        <label for="phone">Телефон:</label>                        
+                        <input type="text" id="phone" name="phone" autocomplete="tel" placeholder="" required>
+                    </div> 
+                    <div class="field">
+                        <label for="message">Сообщение:</label>                        
+                        <textarea type="text" id="message" name="message" rows="6" placeholder="" required></textarea>
+                    </div>
+                    <button type="submit">Отправить</button>
+                </fieldset>
+            </form>
         </section>
     </main>
     <footer class="footer">
@@ -102,5 +153,10 @@
         </section>
         <p>&copy; 2026 Алсу Хисматуллина. Все права защищены.</p>
     </footer>
+    <script src="addProjects.js"></script>
+    <script src="cli-projects.js"></script>
+    <script src="tasksManager.js"></script>
+    <script src="sendForm.js"></script>
+    <script src="gallery.js"></script>
 </body>
 </html>
